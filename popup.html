@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Currency Converter</title>
+		<script src="popup.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			:root {
+				--blue: #4cc9f0;
+				--lightblue: #2bcaff;
+				--simple-lightblue: #a5e3f7;
+				--simple-white: #ffffff;
+				--darkgrey: #5e5e5e;
+				--em: 16px;
+			}
+
+			body {
+				width: 400px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: var(--em);
+				color: var(--darkgrey);
+				background-color: var(--simple-white);
+			}
+
+			h1 {
+				color: var(--blue);
+			}
+
+			input[type="number"],
+			button {
+				padding: 0.5em;
+				font-size: 1em;
+				border: 1px solid var(--lightblue);
+				border-radius: 4px;
+			}
+
+			button {
+				background-color: var(--lightblue);
+				color: var(--simple-white);
+			}
+
+			p {
+				margin-top: 1em;
+			}
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.wrapper > div {
+				margin: 10px;
+				width: 400px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.wrapper > div > input {
+				margin-left: 10px;
+				margin-right: 10px;
+				width: 200px;
+			}
+
+			.wrapper > div > label {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Currency Converter</h1>
+		<div class="wrapper">
+			<div>
+				<label for="usd-amd">USD to AMD:</label>
+				<input
+					type="number"
+					id="usd-amd"
+					step="0.01"
+					placeholder="Amount in USD"
+				/>
+				<button id="convert-usd-amd">Convert</button>
+				<p id="result-usd-amd"></p>
+			</div>
+			<div>
+				<label for="usd-rub">USD to RUB:</label>
+				<input
+					type="number"
+					id="usd-rub"
+					step="0.01"
+					placeholder="Amount in USD"
+				/>
+				<button id="convert-usd-rub">Convert</button>
+				<p id="result-usd-rub"></p>
+			</div>
+			<div>
+				<label for="rub-amd">RUB to AMD:</label>
+				<input
+					type="number"
+					id="rub-amd"
+					step="0.01"
+					placeholder="Amount in RUB"
+				/>
+				<button id="convert-rub-amd">Convert</button>
+				<p id="result-rub-amd"></p>
+			</div>
+		</div>
+	</body>
+</html>
